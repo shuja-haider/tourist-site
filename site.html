@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#Home">Home</a></li>
+            <li class="active"><a href="#events">Events</a></li>
+            <li class="active"><a href="#explore">Explore</a></li>
+            <li class="active"><a href="#tours" >Tours</a></li>
+            <li class="active"><a href="#Sign">Sign in</a></li>
+            <li class="ctn"><a href="#contact">Contact</a></li>
+        </ul>
+        <img src="menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content" id="home">
+            <h2>Explore The Colorful World</h2>
+            <div class="line"></div>
+            <h1>A WONDERFUL GIFT</h1>
+            <a href="#" class="ctin">Learn More</a>
+        </div>
+
+    </header>
+    <!-- **event section** -->
+
+    <section class="events" id="events">
+        <div class="title">
+            <h1>Upcoming Events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="img1.png" alt="">
+                <h4>Everest camp trek</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis expedita iste quas molestiae
+                    alias sapiente.</p>
+                <a href="#" class="ctin">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="img2.png" alt="">
+                <h4>Walking Holidays</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis expedita iste quas molestiae
+                    alias sapiente.</p>
+                <a href="#" class="ctin">Learn More</a>
+            </div>
+        </div>
+    </section>
+<!-- explore -->
+    <section class="explore" id="explore">
+        <div class="explore-content">
+            <h1>Explore The World</h1>
+            <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptas distinctio obcaecati enim a
+                deserunt
+                quasi magni, ad, labore temporibus reprehenderit natus quae ipsum nisi.</p>
+            <a href="#" class="ctin">Learn More</a>
+        </div>
+    </section>
+<!-- tours -->
+    <section class="tours" id="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1>UPCOMING TOURS & DESTINATION</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dicta explicabo inventore fuga optio
+                    dolorem qui quasi laboriosam accusantium. Quibusdam placeat minus culpa perferendis voluptate
+                    dolorem optio vitae itaque libero?</p>
+                    <a href="#" class="ctin">Learn More</a>
+                
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="img3.png" alt="">
+                    <img src="img4.png" alt="">
+                    <img src="img5.png" alt="">
+                    <img src="img6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sign in form-->
+    <section class="sign" id="Sign">
+        <div class="hero">
+            <div class="form-box">
+                <div class="btn-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <div class="social-icon">
+                   <a href="https://www.facebook.com/"> <img src="fb.png" alt=""></a>
+                   <a href="https://www.youtube.com/"> <img src="yt.png" alt=""></a>
+                   <a href="https://www.twitter.com/"><img src="tw.png" alt=""></a>
+
+                </div>
+                <!-- login form -->
+                <form class="input-group" id="login">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Login </button>
+                </form>
+                <!-- registration form  -->
+                <form class="input-group" id="Register">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="email" class="input-field" placeholder="Email id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the term & Conditions</span>
+                    <button type="submit" class="submit-btn">Register </button>
+                </form>
+                
+            </div>
+            <div class="about" id="contact">
+                <p class="p">2nd street, muhallah Rasool pura, Mailsi, Pakistan | Phone : 03041854842 | Email: shujasaleh3@gmail.com |</p>
+                    <p  class="p">Copyright &copy; 2022 Outdoor Adventure</p>
+             
+            </div>   
+        </div>
+    </section>
+
+ <!-- **javascript** -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+
+        var x = document.getElementById("login")
+        var y = document.getElementById("Register")
+        var z = document.getElementById("btn")
+
+        function register(){
+            x.style.left="-400px"
+            y.style.left="50px"
+            z.style.left="110px"
+        }
+
+        function login(){
+            x.style.left="50px"
+            y.style.left="450px"
+            z.style.left="0px"
+        }
+
+    </script>
+</body>
+
+</html>
